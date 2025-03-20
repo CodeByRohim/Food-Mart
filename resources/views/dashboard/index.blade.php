@@ -1,5 +1,5 @@
 @extends('layouts.BackendMaster')
-@section('dashboards')
+@section('dashboard')
 @section('title','Dashboard')
         <div class="container">
           <div class="page-inner">
@@ -12,7 +12,7 @@
                 @foreach($users as $user)
                       <span class="fw-bold">{{ $user->name }} </span>
                       @endforeach
-                      {{-- <span class="fw-bold">{{ $users->name }} </span> --}}
+                      
               </div>
               <div class="ms-md-auto py-2 py-md-0">
                 <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>

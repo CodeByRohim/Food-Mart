@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('discount');
             $table->string('image');
-            $table->string('description/unit');
+            $table->string('description/unit')->nullable();
             $table->integer('amount');
             $table->integer('price');
             $table->integer('stock');

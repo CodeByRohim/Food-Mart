@@ -1,5 +1,7 @@
 
-
+@extends('layouts.BackendMaster')
+@section('widgets')
+@section('title','Widget')
         <div class="container">
           <div class="page-inner">
             <!-- Card -->
@@ -1438,5 +1440,5 @@
             </div>
           </div>
         </div>
-
+@endsection
         

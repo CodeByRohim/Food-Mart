@@ -20,7 +20,7 @@ class Authenticate
     protected function redirectTo($request)
 {
     if (!$request->expectsJson()) {
-        return route('login'); // নিশ্চিত করুন যে login route টি আছে
+        return route('login');
     }
 }
 

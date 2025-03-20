@@ -1,4 +1,6 @@
-
+@extends('layouts.BackendMaster')
+@section('starter-template')
+@section('title','Starter-Template')
 
         <div class="container">
           <div class="page-inner">
@@ -28,4 +30,4 @@
           </div>
         </div>
 
-        
+@endsection

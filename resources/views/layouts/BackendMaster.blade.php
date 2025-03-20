@@ -94,6 +94,30 @@
                   </ul>
                 </div>
               </li>
+              <li class="nav-item">
+                <a
+                  data-bs-toggle=""
+                  href="{{route('trending-products')}}"
+                  class=""
+                  
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Trending Products</p>
+                  {{-- <span class="caret"></span> --}}
+                </a>
+              </li>
+              {{-- <li class="nav-item">
+                <a
+                  data-bs-toggle=""
+                  href="{{route('edit-trending-products')}}"
+                  class=""
+                  
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Edit Trending Products</p>
+                  
+                </a>
+               </li> --}}
               <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
@@ -165,12 +189,12 @@
                 <div class="collapse" id="sidebarLayouts">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="sidebar-style-2.html">
+                      <a href="{{route('sidebar-style-2')}}">
                         <span class="sub-item">Sidebar Style 2</span>
                       </a>
                     </li>
                     <li>
-                      <a href="icon-menu.html">
+                      <a href="{{route('icon-menu')}}">
                         <span class="sub-item">Icon Menu</span>
                       </a>
                     </li>
@@ -257,14 +281,14 @@
                 </div>
               </li>
               <li class="nav-item active">
-                <a href="widgets.html">
+                <a href="{{'widgets'}}">
                   <i class="fas fa-desktop"></i>
                   <p>Widgets</p>
                   <span class="badge badge-success">4</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../documentation/index.html">
+                <a href="../../documentation/index.php">
                   <i class="fas fa-file"></i>
                   <p>Documentation</p>
                   <span class="badge badge-secondary">1</span>
@@ -715,16 +739,20 @@
         </div>
 
         {{-- content --}}
-        @yield('dashboards')
-
-
+        @yield('dashboard')
+        @yield('icon-menu')
+        @yield('sidebar-style-2')
+        @yield('starter-template')
+        @yield('widgets')
+        @yield('trending-products')
+        @yield('edit-trending-products')
     <footer class="footer">
       <div class="container-fluid d-flex justify-content-between">
         <nav class="pull-left">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="http://www.Mentor.com">
-                Mentor
+              <a class="nav-link" href="#">
+                Food Mart
               </a>
             </li>
             <li class="nav-item">

@@ -5,9 +5,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-                     {{-- @foreach($users as $user)
-                      <span class="fw-bold">{{ $user->name }} </span>
-                      @endforeach --}}
+                     
             <div class="banner-blocks">
             
               <div class="banner-ad large bg-info block-1">

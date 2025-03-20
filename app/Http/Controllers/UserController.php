@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+   
     /**
      * Display a listing of the resource.
      */
@@ -21,14 +22,22 @@ class UserController extends Controller
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return view('dashboard.index');
-
+            $users = User::all();
+           
+            return view('dashboard.index', compact('users'));
         }
     
         return back()->withErrors(['errors' => "Password and email don't match."]);
-  
-    }
 
+    }
+    /**
+     * Show the admin url hit redirect to login page
+     */
+     public function adminUrl(){
+     return redirect()->route('login');
+    
+    }
+    
     /**
      * Show the form for creating a new resource.
      */
@@ -69,13 +78,8 @@ class UserController extends Controller
      */
     public function show()
     {
-        
-            $users = User::all();
-            return view('dashboard.index', compact('users'));//working
-        
-        // View::share('users');
-        // return view('dashboard.index', compact('users'));
-        // return view('layouts.BackendMaster', compact('users'));
+          
+            return view('dashboard.index');
     }
 
     /**
